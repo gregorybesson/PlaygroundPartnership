@@ -18,7 +18,7 @@ class Module
         $translator = $serviceManager->get('translator');
         AbstractValidator::setDefaultTranslator($translator,'adfabcore');
 
-        // If AdfabGame is installed, I can add my own partners to benefit from
+        // If PlaygroundGame is installed, I can add my own partners to benefit from
         // this feature
         $e->getApplication()
             ->getEventManager()
@@ -30,7 +30,7 @@ class Module
     }
 
     /**
-     * This method get the partners and add them as array to AdfabGame form so
+     * This method get the partners and add them as array to PlaygroundGame form so
      * that there is non adherence between modules...
      * not that satisfied
      *
