@@ -1,0 +1,41 @@
+{
+	"name" : "adfab/partnership",
+	"description" : "A module for managing partnershipd for AdFab ZF2 dev",
+	"type" : "library",
+	"authors" : [{
+			"name" : "Greg Besson",
+			"email" : "gregory.besson@adfab.fr",
+			"homepage" : "http://www.adfab.fr"
+		}
+	],
+	"keywords" : [
+		"zf2",
+		"playground",
+		"adfab-partnership"
+	],
+	"homepage" : "https://github.com/gregorybesson/PlaygroundPartnership",
+	"license" : [
+		"BSD-3-Clause"
+	],
+	"require" : {
+		"doctrine/doctrine-orm-module" : "*",
+		"zendframework/zend-stdlib" : "~2.1",
+		"php" : ">=5.3.3",
+		"zf-commons/zfc-base" : "0.*",
+		"zendframework/zend-mvc" : "~2.1",
+		"zendframework/zend-form" : "~2.1",
+		"zendframework/zend-loader" : "~2.1",
+		"zendframework/zend-servicemanager" : "~2.1",
+		"adfab/core" : "0.*",
+		"zendframework/zend-modulemanager" : "~2.1"
+	},
+    "require-dev" : {
+		"phpunit/phpunit" : "3.7.*"
+	},
+	"autoload" : {
+		"psr-0" : {
+			"PlaygroundPartnership" : "src/"
+		}
+	},
+	"minimum-stability" : "dev"
+}

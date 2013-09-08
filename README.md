@@ -1,4 +1,4 @@
-PlaygroundPartnership
-=====================
+AdfabPartnership
+================
 
-Partnership Module of Playground
+Module de gestion de partenaires sur un site
