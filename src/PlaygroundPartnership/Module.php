@@ -16,7 +16,7 @@ class Module
         $moduleRouteListener->attach($eventManager);
 
         $translator = $serviceManager->get('translator');
-        AbstractValidator::setDefaultTranslator($translator,'adfabcore');
+        AbstractValidator::setDefaultTranslator($translator,'playgroundcore');
 
         // If PlaygroundGame is installed, I can add my own partners to benefit from
         // this feature
