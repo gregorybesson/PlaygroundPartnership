@@ -1,17 +1,17 @@
 {
-	"name" : "adfab/partnership",
-	"description" : "A module for managing partnershipd for AdFab ZF2 dev",
+	"name" : "playground/partnership",
+	"description" : "Playground Partnership Module",
 	"type" : "library",
 	"authors" : [{
 			"name" : "Greg Besson",
-			"email" : "gregory.besson@adfab.fr",
-			"homepage" : "http://www.adfab.fr"
+			"email" : "gregory.besson@playground.gg",
+			"homepage" : "http://www.playground.gg"
 		}
 	],
 	"keywords" : [
 		"zf2",
 		"playground",
-		"adfab-partnership"
+		"playground-partnership"
 	],
 	"homepage" : "https://github.com/gregorybesson/PlaygroundPartnership",
 	"license" : [

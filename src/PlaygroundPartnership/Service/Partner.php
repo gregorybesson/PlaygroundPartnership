@@ -106,7 +106,7 @@ class Partner extends EventProvider implements ServiceManagerAwareInterface
      * @param  array                        $data
      * @param  string                       $entityClass
      * @param  string                       $formClass
-     * @return \AdfabPartner\Entity\Partner
+     * @return \PlaygroundPartnership\Entity\Partner
      */
     public function edit(array $data, $partner, $formClass)
     {

@@ -136,10 +136,10 @@ class Partner extends ProvidesEventsForm
             'name' => 'bouncePage',
             'type' => 'Zend\Form\Element\Radio',
             'options' => array(
-                'label' => $translator->translate('Page de recirculation', 'adfabuser'),
+                'label' => $translator->translate('Page de recirculation', 'playgroundpartnership'),
                 'value_options' => array(
-                    '1' => $translator->translate('Oui', 'adfabuser'),
-                    '0' => $translator->translate('Non', 'adfabuser'),
+                    '1' => $translator->translate('Oui', 'playgroundpartnership'),
+                    '0' => $translator->translate('Non', 'playgroundpartnership'),
                 ),
             ),
         ));

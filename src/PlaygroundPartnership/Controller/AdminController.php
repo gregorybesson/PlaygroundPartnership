@@ -104,7 +104,7 @@ class AdminController extends AbstractActionController
         }
 
         $viewModel = new ViewModel();
-        $viewModel->setTemplate('adfab-partnership/admin/partner');
+        $viewModel->setTemplate('playground-partnership/admin/partner');
 
         return $viewModel->setVariables(array('form' => $form));
     }
@@ -135,7 +135,7 @@ class AdminController extends AbstractActionController
         }
 
         $viewModel = new ViewModel();
-        $viewModel->setTemplate('adfab-partnership/admin/partner');
+        $viewModel->setTemplate('playground-partnership/admin/partner');
 
         return $viewModel->setVariables(array('form' => $form));
     }
