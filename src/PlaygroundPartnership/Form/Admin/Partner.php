@@ -146,7 +146,6 @@ class Partner extends ProvidesEventsForm
 
         $submitElement = new Element\Button('submit');
         $submitElement
-        ->setLabel($translator->translate('Create', 'playgroundpartnership'))
         ->setAttributes(array(
             'type'  => 'submit',
         ));

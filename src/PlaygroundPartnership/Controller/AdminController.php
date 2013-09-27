@@ -87,7 +87,6 @@ class AdminController extends AbstractActionController
     public function createAction()
     {
         $form = $this->getServiceLocator()->get('playgroundpartnership_partner_form');
-        $form->get('submit')->setLabel('Créer');
         $request = $this->getRequest();
 
         if ($request->isPost()) {
@@ -115,7 +114,6 @@ class AdminController extends AbstractActionController
         $partner = $this->getPartnerMapper()->findById($partnerId);
 
         $form = $this->getServiceLocator()->get('playgroundpartnership_partner_form');
-        $form->get('submit')->setLabel('Mettre à jour');
 
         $request = $this->getRequest();
 
