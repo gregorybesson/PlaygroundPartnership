@@ -15,7 +15,17 @@ class Module
         $moduleRouteListener = new ModuleRouteListener();
         $moduleRouteListener->attach($eventManager);
 
-        $translator = $serviceManager->get('translator');
+        $options = $serviceManager->get('playgroundcore_module_options');
+        $locale = $options->getLocale();
+        if (!empty($locale)) {
+            //translator
+            $translator = $serviceManager->get('translator');
+            $translator->setLocale($locale);
+
+            // plugins
+            $translate = $serviceManager->get('viewhelpermanager')->get('translate');
+            $translate->getTranslator()->setLocale($locale);
+        }
         AbstractValidator::setDefaultTranslator($translator,'playgroundcore');
 
         // If PlaygroundGame is installed, I can add my own partners to benefit from
