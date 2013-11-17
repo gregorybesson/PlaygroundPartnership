@@ -27,4 +27,20 @@ return array(
     'Dynablocks' => 'Blocs dynamiques',
     'Available Dynareas' => 'Zone cible disponible',
 
+	'Partners' => 'Les partenaires',
+	'Id' => 'Id',
+	'Name' => 'Nom',
+	'Logo' => 'Logo',
+	'Small logo' => 'Petit logo',
+	'Active' => 'Actif',
+	'Add partner' => 'Créer un partenaire',
+		
+	// Admin create partners
+	'Yes' => 'Oui',
+	'No' => 'Non',
+	'Web site' => 'Site Web',
+	'Facebook Page' => 'Page Facebook',	
+	'Active newsletter registration' => 'Activer l\'inscription newsletter',
+	'Recirculation page' => 'Page de recirculation',
+		
 );

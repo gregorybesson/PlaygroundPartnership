@@ -39,11 +39,11 @@ class Partner extends ProvidesEventsForm
         $this->add(array(
             'name' => 'name',
             'options' => array(
-                'label' => $translator->translate('Nom', 'playgroundpartnership'),
+                'label' => $translator->translate('Name', 'playgroundpartnership'),
             ),
             'attributes' => array(
                 'type' => 'text',
-                'placeholder' => $translator->translate('Nom', 'playgroundpartnership'),
+                'placeholder' => $translator->translate('Name', 'playgroundpartnership'),
             ),
         ));
 
@@ -53,10 +53,10 @@ class Partner extends ProvidesEventsForm
             'options' => array(
                 //'empty_option' => $translator->translate('Is the answer correct ?', 'playgroundpartnership'),
                 'value_options' => array(
-                    '0' => $translator->translate('Non', 'playgroundpartnership'),
-                    '1' => $translator->translate('Oui', 'playgroundpartnership'),
+                    '0' => $translator->translate('No', 'playgroundpartnership'),
+                    '1' => $translator->translate('Yes', 'playgroundpartnership'),
                 ),
-                'label' => $translator->translate('Actif', 'playgroundpartnership'),
+                'label' => $translator->translate('Active', 'playgroundpartnership'),
             ),
         ));
 
@@ -85,7 +85,7 @@ class Partner extends ProvidesEventsForm
                 'type'  => 'file',
             ),
             'options' => array(
-                'label' => $translator->translate('Petit logo', 'playgroundpartnership'),
+                'label' => $translator->translate('Small logo', 'playgroundpartnership'),
             ),
         ));
 
@@ -100,22 +100,22 @@ class Partner extends ProvidesEventsForm
         $this->add(array(
             'name' => 'website',
             'options' => array(
-                'label' => $translator->translate('Site Web', 'playgroundpartnership'),
+                'label' => $translator->translate('Web site', 'playgroundpartnership'),
             ),
             'attributes' => array(
                 'type' => 'text',
-                'placeholder' => $translator->translate('Site Web', 'playgroundpartnership'),
+                'placeholder' => $translator->translate('Web site', 'playgroundpartnership'),
             ),
         ));
 
         $this->add(array(
             'name' => 'facebook',
             'options' => array(
-                'label' => $translator->translate('Page Facebook', 'playgroundpartnership'),
+                'label' => $translator->translate('Facebook Page', 'playgroundpartnership'),
             ),
             'attributes' => array(
                 'type' => 'text',
-                'placeholder' => $translator->translate('Page Facebook', 'playgroundpartnership'),
+                'placeholder' => $translator->translate('Facebook Page', 'playgroundpartnership'),
             ),
         ));
 
@@ -125,10 +125,10 @@ class Partner extends ProvidesEventsForm
             'options' => array(
             //'empty_option' => $translator->translate('Is the answer correct ?', 'playgroundpartnership'),
                 'value_options' => array(
-                    '0' => $translator->translate('Non', 'playgroundpartnership'),
-                    '1' => $translator->translate('Oui', 'playgroundpartnership'),
+                    '0' => $translator->translate('No', 'playgroundpartnership'),
+                    '1' => $translator->translate('Yes', 'playgroundpartnership'),
                 ),
-                'label' => $translator->translate('Activer l\'inscription newsletter', 'playgroundpartnership'),
+                'label' => $translator->translate('Active newsletter registration', 'playgroundpartnership'),
             ),
         ));
 
@@ -136,10 +136,10 @@ class Partner extends ProvidesEventsForm
             'name' => 'bouncePage',
             'type' => 'Zend\Form\Element\Radio',
             'options' => array(
-                'label' => $translator->translate('Page de recirculation', 'playgroundpartnership'),
+                'label' => $translator->translate('Recirculation page', 'playgroundpartnership'),
                 'value_options' => array(
-                    '1' => $translator->translate('Oui', 'playgroundpartnership'),
-                    '0' => $translator->translate('Non', 'playgroundpartnership'),
+                    '1' => $translator->translate('Yes', 'playgroundpartnership'),
+                    '0' => $translator->translate('No', 'playgroundpartnership'),
                 ),
             ),
         ));
