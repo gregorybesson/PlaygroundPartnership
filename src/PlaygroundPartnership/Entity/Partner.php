@@ -126,6 +126,8 @@ class Partner
     public function setActive($active)
     {
         $this->active = $active;
+        
+        return $this;
     }
 
     /**
@@ -142,6 +144,8 @@ class Partner
     public function setBouncePage($bouncePage)
     {
         $this->bouncePage = $bouncePage;
+        
+        return $this;
     }
 
     /**
@@ -265,6 +269,8 @@ class Partner
     public function setCreatedAt($createdAt)
     {
         $this->createdAt = $createdAt;
+        
+        return $this;
     }
 
     /**
@@ -281,6 +287,8 @@ class Partner
     public function setUpdatedAt($updatedAt)
     {
         $this->updatedAt = $updatedAt;
+        
+        return $this;
     }
 
     /**
