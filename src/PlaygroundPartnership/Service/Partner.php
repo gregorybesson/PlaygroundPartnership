@@ -186,9 +186,9 @@ class Partner extends EventProvider implements ServiceManagerAwareInterface
     public function updateNewsletter(array $data, $user, $partner)
     {
         $subscription = new \PlaygroundPartnership\Entity\Subscriber();
-        $subscription->setPartner($partner);
-        $subscription->setUser($user);
-        $subscription->setActive($data['optin']);
+        $subscription->setPartner($partner)
+            ->setUser($user)
+            ->setActive($data['optin']);
         $subscription = $this->getSubscriberMapper()->update($subscription);
 
         return $subscription;
