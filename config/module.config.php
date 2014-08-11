@@ -179,19 +179,19 @@ return array(
         'admin' => array(
             'playgroundpartnershipadmin' => array(
                 'order' => 80,
-                'label' => 'Partenaires',
+                'label' => 'Partners',
                 'route' => 'admin/playgroundpartnership_admin/list',
                 'resource' => 'partner',
                 'privilege' => 'list',
                 'pages' => array(
                     'list' => array(
-                        'label' => 'Liste des partenaires',
+                        'label' => 'Partners list',
                         'route' => 'admin/playgroundpartnership_admin/list',
                         'resource' => 'partner',
                         'privilege' => 'list',
                     ),
                     'create' => array(
-                        'label' => 'Créer un nouveau partenaire',
+                        'label' => 'Create partner',
                         'route' => 'admin/playgroundpartnership_admin/create',
                         'resource' => 'partner',
                         'privilege' => 'list',

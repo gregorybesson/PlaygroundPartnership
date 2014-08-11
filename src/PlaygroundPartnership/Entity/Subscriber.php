@@ -82,6 +82,8 @@ class Subscriber
     public function setId ($id)
     {
         $this->id = $id;
+        
+        return $this;
     }
 
     /**
@@ -98,6 +100,8 @@ class Subscriber
     public function setUser($user)
     {
         $this->user = $user;
+        
+        return $this;
     }
 
     /**
@@ -114,6 +118,8 @@ class Subscriber
     public function setPartner($partner)
     {
         $this->partner = $partner;
+        
+        return $this;
     }
 
     /**
@@ -130,6 +136,8 @@ class Subscriber
     public function setGame($game)
     {
         $this->game = $game;
+        
+        return $this;
     }
 
     /**
@@ -146,6 +154,8 @@ class Subscriber
     public function setActive($active)
     {
         $this->active = $active;
+        
+        return $this;
     }
 
     /**
@@ -162,6 +172,8 @@ class Subscriber
     public function setCreatedAt($created_at)
     {
         $this->created_at = $created_at;
+        
+        return $this;
     }
 
     /**
@@ -178,6 +190,8 @@ class Subscriber
     public function setUpdatedAt($updated_at)
     {
         $this->updated_at = $updated_at;
+        
+        return $this;
     }
 
     /**
