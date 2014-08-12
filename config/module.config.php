@@ -16,6 +16,29 @@ return array(
             )
         )
     ),
+    
+    'bjyauthorize' => array(
+    
+        'resource_providers' => array(
+            'BjyAuthorize\Provider\Resource\Config' => array(
+                'partner'       => array(),
+            ),
+        ),
+    
+        'rule_providers' => array(
+            'BjyAuthorize\Provider\Rule\Config' => array(
+                'allow' => array(
+                    array(array('admin'), 'partner',        array('list','add','edit','delete')),
+                ),
+            ),
+        ),
+    
+        'guards' => array(
+            'BjyAuthorize\Guard\Controller' => array(
+                array('controller' => 'playgroundpartnership_admin',                            'roles' => array('admin')),
+            ),
+        ),
+    ),
 
     'translator' => array(
         'locale' => 'fr_FR',
