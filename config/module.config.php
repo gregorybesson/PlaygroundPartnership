@@ -60,14 +60,18 @@ return array(
     ),
 	
 	'core_layout' => array(
-		'PlaygroundPartnership' => array(
-			'default_layout' => 'layout/2columns-left',
-			'controllers' => array(
-				'playgroundpartnership_admin' => array(
-					'default_layout' => 'layout/admin',
-				),
-			),
-		),
+	    'frontend' => array(
+	        'modules' => array(
+        		'PlaygroundPartnership' => array(
+        			'default_layout' => 'layout/2columns-left',
+        			'controllers' => array(
+        				'playgroundpartnership_admin' => array(
+        					'default_layout' => 'layout/admin',
+        				),
+        			),
+        		),
+            ),
+        ),
 	),
 
     'controllers' => array(
