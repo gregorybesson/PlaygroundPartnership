@@ -197,25 +197,14 @@ return array(
             ),
         ),
     ),
-
+    
     'navigation' => array(
         'admin' => array(
-            'playgroundpartnershipadmin' => array(
-                'order' => 80,
-                'label' => 'Partners',
-                'route' => 'admin/playgroundpartnership_admin/list',
-                'resource' => 'partner',
-                'privilege' => 'list',
+            'playgroundgame' => array(
                 'pages' => array(
-                    'list' => array(
+                    'partnerlist' => array(
                         'label' => 'Partners list',
                         'route' => 'admin/playgroundpartnership_admin/list',
-                        'resource' => 'partner',
-                        'privilege' => 'list',
-                    ),
-                    'create' => array(
-                        'label' => 'Create partner',
-                        'route' => 'admin/playgroundpartnership_admin/create',
                         'resource' => 'partner',
                         'privilege' => 'list',
                     ),
