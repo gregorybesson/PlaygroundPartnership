@@ -19,8 +19,8 @@ class Partner extends EventProvider implements ServiceManagerAwareInterface
      * @var PartnerMapperInterface
      */
     protected $partnerMapper;
-	
-	protected $subscriberMapper;
+    
+    protected $subscriberMapper;
 
     /**
      * @var ServiceManager
@@ -61,16 +61,14 @@ class Partner extends EventProvider implements ServiceManagerAwareInterface
         ));
 
         $input->getValidatorChain()->addValidator($noObjectExistsValidator);
-		
-		if (!empty($data['website']))
-		{
-			$data['website'] = $this->verifyProtocol($data['website']);
-		}
-		
-		 if (!empty($data['facebook']))
-		{
-			$data['facebook'] = $this->verifyProtocol($data['facebook'], 'https://');
-		}
+        
+        if (!empty($data['website'])) {
+            $data['website'] = $this->verifyProtocol($data['website']);
+        }
+        
+        if (!empty($data['facebook'])) {
+            $data['facebook'] = $this->verifyProtocol($data['facebook'], 'https://');
+        }
 
         $form->setData($data);
 
@@ -129,15 +127,13 @@ class Partner extends EventProvider implements ServiceManagerAwareInterface
 
         $input->getValidatorChain()->addValidator($noObjectExistsValidator);*/
 
-        if (!empty($data['website']))
-		{
-			$data['website'] = $this->verifyProtocol($data['website']);
-		}
-		
-		 if (!empty($data['facebook']))
-		{
-			$data['facebook'] = $this->verifyProtocol($data['facebook'], 'https://');
-		}
+        if (!empty($data['website'])) {
+            $data['website'] = $this->verifyProtocol($data['website']);
+        }
+        
+        if (!empty($data['facebook'])) {
+            $data['facebook'] = $this->verifyProtocol($data['facebook'], 'https://');
+        }
         
         $form->setData($data);
 
@@ -172,8 +168,8 @@ class Partner extends EventProvider implements ServiceManagerAwareInterface
     {
         return $this->getSubscriberMapper()->isSubscriber($partner, $user);
     }
-	
-	 public function findSubscribers($partner)
+    
+    public function findSubscribers($partner)
     {
         return $this->getSubscriberMapper()->findSubscribers($partner);
     }
@@ -296,22 +292,20 @@ class Partner extends EventProvider implements ServiceManagerAwareInterface
 
         return $this;
     }
-	
-	/**
+    
+    /**
      * Add protocol to an url if missing
      *
      * @param  url
-	 * @param  append
+     * @param  append
      * @return string
      */
-     public function verifyProtocol($url, $append = 'http://')
-	 {
-	 	if(strpos($url,'http://') === false && strpos($url,'https://') === false)
-		{
-			$url = $append.$url;
-		}
-		
-		return $url;
-	 }
-}	 
-
+    public function verifyProtocol($url, $append = 'http://')
+    {
+        if (strpos($url, 'http://') === false && strpos($url, 'https://') === false) {
+            $url = $append.$url;
+        }
+        
+        return $url;
+    }
+}

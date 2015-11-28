@@ -8,7 +8,7 @@ use Zend\Validator\AbstractValidator;
 class Module
 {
 
-    public function onBootstrap (MvcEvent $e)
+    public function onBootstrap(MvcEvent $e)
     {
         $serviceManager = $e->getApplication()->getServiceManager();
         $eventManager = $e->getApplication()->getEventManager();
@@ -26,7 +26,7 @@ class Module
             $translate = $serviceManager->get('viewhelpermanager')->get('translate');
             $translate->getTranslator()->setLocale($locale);
         }
-        AbstractValidator::setDefaultTranslator($translator,'playgroundcore');
+        AbstractValidator::setDefaultTranslator($translator, 'playgroundcore');
 
         // If PlaygroundGame is installed, I can add my own partners to benefit from
         // this feature
@@ -36,7 +36,7 @@ class Module
             ->attach('Zend\Mvc\Application', 'getPartners', array(
             $this,
             'updatePartners'
-        ));
+            ));
     }
 
     /**
@@ -47,7 +47,7 @@ class Module
      * @param  EventManager $e
      * @return array
      */
-    public function updatePartners ($e)
+    public function updatePartners($e)
     {
         $partnersArray = $e->getParam('partners');
 
@@ -63,12 +63,12 @@ class Module
         return $partnersArray;
     }
 
-    public function getConfig ()
+    public function getConfig()
     {
         return include __DIR__ . '/../../config/module.config.php';
     }
 
-    public function getAutoloaderConfig ()
+    public function getAutoloaderConfig()
     {
         return array(
             'Zend\Loader\StandardAutoloader' => array(
@@ -83,18 +83,18 @@ class Module
     {
         return array(
             'factories' => array(
-                'partnerSubscriber' => function($sm) {
-                $locator = $sm->getServiceLocator();
-                $viewHelper = new View\Helper\PartnerSubscriber;
-                $viewHelper->setPartnerService($locator->get('playgroundpartnership_partner_service'));
+                'partnerSubscriber' => function ($sm) {
+                    $locator = $sm->getServiceLocator();
+                    $viewHelper = new View\Helper\PartnerSubscriber;
+                    $viewHelper->setPartnerService($locator->get('playgroundpartnership_partner_service'));
 
-                return $viewHelper;
+                    return $viewHelper;
                 },
             ),
         );
     }
 
-    public function getServiceConfig ()
+    public function getServiceConfig()
     {
         return array(
             'aliases' => array(
@@ -106,18 +106,18 @@ class Module
             ),
 
             'factories' => array(
-                'playgroundpartnership_module_options' => function  ($sm) {
+                'playgroundpartnership_module_options' => function ($sm) {
                     $config = $sm->get('Configuration');
 
                     return new Options\ModuleOptions(isset($config['playgroundpartnership']) ? $config['playgroundpartnership'] : array());
                 },
-                'playgroundpartnership_partner_mapper' => function  ($sm) {
+                'playgroundpartnership_partner_mapper' => function ($sm) {
                     return new Mapper\Partner($sm->get('playgroundpartnership_doctrine_em'), $sm->get('playgroundpartnership_module_options'));
                 },
-                'playgroundpartnership_subscriber_mapper' => function  ($sm) {
+                'playgroundpartnership_subscriber_mapper' => function ($sm) {
                     return new Mapper\Subscriber($sm->get('playgroundpartnership_doctrine_em'), $sm->get('playgroundpartnership_module_options'));
                 },
-                'playgroundpartnership_partner_form' => function  ($sm) {
+                'playgroundpartnership_partner_form' => function ($sm) {
                     $translator = $sm->get('translator');
                     $form = new Form\Admin\Partner(null, $sm, $translator);
                     $partner = new Entity\Partner();

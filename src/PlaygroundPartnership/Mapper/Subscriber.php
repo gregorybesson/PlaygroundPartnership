@@ -42,14 +42,14 @@ class Subscriber
     public function isSubscriber($partner, $user)
     {
         $entity = $this->getEntityRepository()->findOneBy(array('partner' => $partner, 'user' => $user));
-         if ($entity) {
-             return true;
-         } else {
-             return false;
-         }
+        if ($entity) {
+            return true;
+        } else {
+            return false;
+        }
     }
-	
-	 public function findSubscribers($partner)
+    
+    public function findSubscribers($partner)
     {
         return $entity = $this->getEntityRepository()->findBy(array('partner' => $partner));
     }

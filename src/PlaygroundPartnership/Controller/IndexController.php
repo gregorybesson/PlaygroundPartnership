@@ -32,7 +32,7 @@ class IndexController extends AbstractActionController
         $partner = $sp->getPartnerMapper()->findById($identifier);
 
         if ($request->isPost() && $partner && $user) {
-           $data = $this->getRequest()->getPost()->toArray();
+            $data = $this->getRequest()->getPost()->toArray();
 
             if ($this->getPartnerService()->updateNewsletter($data, $this->zfcUserAuthentication()->getIdentity(), $partner)) {
                 $response->setContent(\Zend\Json\Json::encode(array(

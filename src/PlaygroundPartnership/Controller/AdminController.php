@@ -91,8 +91,8 @@ class AdminController extends AbstractActionController
 
         if ($request->isPost()) {
             $data = array_merge(
-                    $request->getPost()->toArray(),
-                    $request->getFiles()->toArray()
+                $request->getPost()->toArray(),
+                $request->getFiles()->toArray()
             );
             $partner = $this->getAdminPartnerService()->create($data, 'playgroundpartnership_partner_form');
             if ($partner) {
@@ -121,8 +121,8 @@ class AdminController extends AbstractActionController
 
         if ($request->isPost()) {
             $data = array_merge(
-                    $request->getPost()->toArray(),
-                    $request->getFiles()->toArray()
+                $request->getPost()->toArray(),
+                $request->getFiles()->toArray()
             );
             $partner = $this->getAdminPartnerService()->edit($data, $partner, 'playgroundpartnership_partner_form');
             if ($partner) {
@@ -147,9 +147,9 @@ class AdminController extends AbstractActionController
             try {
                 $this->getPartnerMapper()->remove($partner);
             } catch (\Doctrine\DBAL\DBALException $e) {
-            $this->flashMessenger()->setNamespace('playgroundpartnership')->addMessage('Vous devez retirer ce partenaire des jeux pour pouvoir le supprimer');
+                $this->flashMessenger()->setNamespace('playgroundpartnership')->addMessage('Vous devez retirer ce partenaire des jeux pour pouvoir le supprimer');
             //throw $e;
-        }
+            }
 
             $this->flashMessenger()->setNamespace('playgroundpartnership')->addMessage('The partner was deleted');
         }

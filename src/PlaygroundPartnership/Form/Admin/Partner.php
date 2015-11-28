@@ -26,7 +26,7 @@ class Partner extends ProvidesEventsForm
         //$this->setHydrator(new DoctrineHydrator($entityManager, 'PlaygroundPartnership\Entity\Partner'));
 
         parent::__construct();
-        $this->setAttribute('enctype','multipart/form-data');
+        $this->setAttribute('enctype', 'multipart/form-data');
 
         $this->add(array(
             'name' => 'id',
