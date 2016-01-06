@@ -14,14 +14,11 @@ class PartnerSubscriber extends AbstractHelper
      */
     public function __invoke($partner, $user)
     {
-        
         if ($user == false) {
             return $this->getPartnerService()->findSubscribers($partner);
         } else {
             return $this->getPartnerService()->isSubscriber($partner, $user);
         }
-        
-        
     }
 
     /**

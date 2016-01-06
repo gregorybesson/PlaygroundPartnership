@@ -3,7 +3,6 @@
 namespace PlaygroundPartnership\Service;
 
 use PlaygroundPartnership\Entity\Partner as PartnerEntity;
-
 use Zend\Form\Form;
 use Zend\ServiceManager\ServiceManagerAwareInterface;
 use Zend\ServiceManager\ServiceManager;
