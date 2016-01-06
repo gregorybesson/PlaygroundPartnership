@@ -50,7 +50,6 @@ class Subscriber
 
     public function __construct()
     {
-
     }
 
     /** @PrePersist */
