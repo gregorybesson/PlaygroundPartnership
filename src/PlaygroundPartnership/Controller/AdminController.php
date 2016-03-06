@@ -5,10 +5,29 @@ namespace PlaygroundPartnership\Controller;
 use Zend\Mvc\Controller\AbstractActionController;
 use PlaygroundPartnership\Options\ModuleOptions;
 use Zend\View\Model\ViewModel;
+use Zend\ServiceManager\ServiceLocatorInterface;
 
 class AdminController extends AbstractActionController
 {
-    protected $options, $partnerMapper, $adminActionService;
+    protected $options;
+    protected $partnerMapper;
+    protected $adminActionService;
+    /**
+     *
+     * @var ServiceManager
+     */
+    protected $serviceLocator;
+
+    public function __construct(ServiceLocatorInterface $locator)
+    {
+        $this->serviceLocator = $locator;
+    }
+
+    public function getServiceLocator()
+    {
+        
+        return $this->serviceLocator;
+    }
 
     public function listAction()
     {
