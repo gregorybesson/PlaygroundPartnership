@@ -4,14 +4,14 @@ namespace PlaygroundPartnership\Service;
 
 use PlaygroundPartnership\Entity\Partner as PartnerEntity;
 use Zend\Form\Form;
-use Zend\ServiceManager\ServiceManagerAwareInterface;
 use Zend\ServiceManager\ServiceManager;
 use ZfcBase\EventManager\EventProvider;
 use PlaygroundPartnership\Options\ModuleOptions;
 use DoctrineModule\Validator\NoObjectExists as NoObjectExistsValidator;
 use Zend\Stdlib\ErrorHandler;
+use Zend\ServiceManager\ServiceLocatorInterface;
 
-class Partner extends EventProvider implements ServiceManagerAwareInterface
+class Partner extends EventProvider
 {
 
     /**
@@ -30,6 +30,11 @@ class Partner extends EventProvider implements ServiceManagerAwareInterface
      * @var UserServiceOptionsInterface
      */
     protected $options;
+
+    public function __construct(ServiceLocatorInterface $locator)
+    {
+        $this->serviceManager = $locator;
+    }
 
     /**
      *
@@ -277,19 +282,6 @@ class Partner extends EventProvider implements ServiceManagerAwareInterface
     public function getServiceManager()
     {
         return $this->serviceManager;
-    }
-
-    /**
-     * Set service manager instance
-     *
-     * @param  ServiceManager $serviceManager
-     * @return User
-     */
-    public function setServiceManager(ServiceManager $serviceManager)
-    {
-        $this->serviceManager = $serviceManager;
-
-        return $this;
     }
     
     /**

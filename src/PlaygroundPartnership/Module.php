@@ -101,11 +101,8 @@ class Module
                 'playgroundpartnership_doctrine_em' => 'doctrine.entitymanager.orm_default'
             ),
 
-            'invokables' => array(
-                'playgroundpartnership_partner_service' => 'PlaygroundPartnership\Service\Partner'
-            ),
-
             'factories' => array(
+                'playgroundpartnership_partner_service' => 'PlaygroundPartnership\Service\Factory\PartnerFactory',
                 'playgroundpartnership_module_options' => function ($sm) {
                     $config = $sm->get('Configuration');
 

@@ -75,9 +75,9 @@ return array(
 	),
 
     'controllers' => array(
-        'invokables' => array(
-            'playgroundpartnership_admin' => 'PlaygroundPartnership\Controller\AdminController',
-            'playgroundpartnership'      => 'PlaygroundPartnership\Controller\IndexController',
+        'factories' => array(
+            'playgroundpartnership_admin' => 'PlaygroundPartnership\Service\Factory\AdminControllerFactory',
+            'playgroundpartnership'      => 'PlaygroundPartnership\Service\Factory\IndexControllerFactory',
         ),
     ),
 
