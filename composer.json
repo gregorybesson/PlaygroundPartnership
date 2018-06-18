@@ -30,8 +30,8 @@
 		"satooshi/php-coveralls": "0.*"
 	},
 	"autoload" : {
-		"psr-0" : {
-			"PlaygroundPartnership" : "src/"
+		"psr-4" : {
+			"PlaygroundPartnership\\" : "src/"
 		}
 	},
 	"extra": {
