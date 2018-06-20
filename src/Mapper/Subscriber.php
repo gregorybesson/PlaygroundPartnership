@@ -4,7 +4,7 @@ namespace PlaygroundPartnership\Mapper;
 
 use Doctrine\ORM\EntityManager;
 use PlaygroundPartnership\Options\ModuleOptions;
-use ZfcBase\Mapper\AbstractDbMapper;
+
 
 class Subscriber
 {

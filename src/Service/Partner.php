@@ -5,14 +5,15 @@ namespace PlaygroundPartnership\Service;
 use PlaygroundPartnership\Entity\Partner as PartnerEntity;
 use Zend\Form\Form;
 use Zend\ServiceManager\ServiceManager;
-use ZfcBase\EventManager\EventProvider;
+use Zend\EventManager\EventManagerAwareTrait;
 use PlaygroundPartnership\Options\ModuleOptions;
 use DoctrineModule\Validator\NoObjectExists as NoObjectExistsValidator;
 use Zend\Stdlib\ErrorHandler;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
-class Partner extends EventProvider
+class Partner
 {
+    use EventManagerAwareTrait;
 
     /**
      * @var PartnerMapperInterface
