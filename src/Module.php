@@ -17,13 +17,13 @@ class Module
 
         $options = $serviceManager->get('playgroundcore_module_options');
         $locale = $options->getLocale();
-        $translator = $serviceManager->get('translator');
+        $translator = $serviceManager->get('MvcTranslator');
         if (!empty($locale)) {
             //translator
             $translator->setLocale($locale);
 
             // plugins
-            $translate = $serviceManager->get('viewhelpermanager')->get('translate');
+            $translate = $serviceManager->get('ViewHelperManager')->get('translate');
             $translate->getTranslator()->setLocale($locale);
         }
         AbstractValidator::setDefaultTranslator($translator, 'playgroundcore');
@@ -73,9 +73,8 @@ class Module
         return array(
             'factories' => array(
                 'partnerSubscriber' => function ($sm) {
-                    $locator = $sm->getServiceLocator();
                     $viewHelper = new View\Helper\PartnerSubscriber;
-                    $viewHelper->setPartnerService($locator->get('playgroundpartnership_partner_service'));
+                    $viewHelper->setPartnerService($sm->get('playgroundpartnership_partner_service'));
 
                     return $viewHelper;
                 },
@@ -104,7 +103,7 @@ class Module
                     return new Mapper\Subscriber($sm->get('playgroundpartnership_doctrine_em'), $sm->get('playgroundpartnership_module_options'));
                 },
                 'playgroundpartnership_partner_form' => function ($sm) {
-                    $translator = $sm->get('translator');
+                    $translator = $sm->get('MvcTranslator');
                     $form = new Form\Admin\Partner(null, $sm, $translator);
                     $partner = new Entity\Partner();
                     $form->setInputFilter($partner->getInputFilter());
