@@ -2,18 +2,14 @@
 namespace PlaygroundPartnership\Service\Factory;
 
 use PlaygroundPartnership\Service\Partner;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
+use Interop\Container\ContainerInterface;
 
 class PartnerFactory implements FactoryInterface
 {
-    /**
-    * @param ServiceLocatorInterface $locator
-    * @return \PlaygroundPartnership\Service\Partner
-    */
-    public function createService(ServiceLocatorInterface $locator)
+    public function __invoke(ContainerInterface $container, $requestedName, $options = null)
     {
-        $service = new Partner($locator);
+        $service = new Partner($container);
 
         return $service;
     }
