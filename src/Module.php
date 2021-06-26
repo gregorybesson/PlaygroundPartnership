@@ -1,9 +1,9 @@
 <?php
 namespace PlaygroundPartnership;
 
-use Zend\Mvc\ModuleRouteListener;
-use Zend\Mvc\MvcEvent;
-use Zend\Validator\AbstractValidator;
+use Laminas\Mvc\ModuleRouteListener;
+use Laminas\Mvc\MvcEvent;
+use Laminas\Validator\AbstractValidator;
 
 class Module
 {
@@ -33,7 +33,7 @@ class Module
         $e->getApplication()
             ->getEventManager()
             ->getSharedManager()
-            ->attach('Zend\Mvc\Application', 'getPartners', array(
+            ->attach('Laminas\Mvc\Application', 'getPartners', array(
             $this,
             'updatePartners'
             ));

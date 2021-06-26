@@ -2,10 +2,10 @@
 
 namespace PlaygroundPartnership\Controller;
 
-use Zend\Mvc\Controller\AbstractActionController;
+use Laminas\Mvc\Controller\AbstractActionController;
 use PlaygroundPartnership\Options\ModuleOptions;
-use Zend\View\Model\ViewModel;
-use Zend\ServiceManager\ServiceLocatorInterface;
+use Laminas\View\Model\ViewModel;
+use Laminas\ServiceManager\ServiceLocatorInterface;
 
 class AdminController extends AbstractActionController
 {
@@ -34,7 +34,7 @@ class AdminController extends AbstractActionController
         $partnerMapper = $this->getPartnerMapper();
         $partners = $partnerMapper->findAll();
         if (is_array($partners)) {
-            $paginator = new \Zend\Paginator\Paginator(new \Zend\Paginator\Adapter\ArrayAdapter($partners));
+            $paginator = new \Laminas\Paginator\Paginator(new \Laminas\Paginator\Adapter\ArrayAdapter($partners));
         } else {
             $paginator = $partners;
         }
@@ -55,7 +55,7 @@ class AdminController extends AbstractActionController
         $subscriberMapper = $this->getAdminPartnerService()->getSubscriberMapper();
         $subscribers = $subscriberMapper->findBy(array('partner' => $partner));
         if (is_array($subscribers)) {
-            $paginator = new \Zend\Paginator\Paginator(new \Zend\Paginator\Adapter\ArrayAdapter($subscribers));
+            $paginator = new \Laminas\Paginator\Paginator(new \Laminas\Paginator\Adapter\ArrayAdapter($subscribers));
         } else {
             $paginator = $subscribers;
         }

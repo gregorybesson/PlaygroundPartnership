@@ -86,7 +86,7 @@ return array(
         	'frontend' => array(
        			'child_routes' => array(        		
 		            'partnership' => array(
-		                'type' => 'Zend\Router\Http\Segment',
+		                'type' => 'Laminas\Router\Http\Segment',
 		                'options' => array(
 		                    'route'    => 'partnership[/:id]',
 		                    'defaults' => array(
@@ -97,7 +97,7 @@ return array(
 		                'may_terminate' => true,
 		                'child_routes' =>array(
 		                    'share' => array(
-		                        'type' => 'Zend\Router\Http\Literal',
+		                        'type' => 'Laminas\Router\Http\Literal',
 		                        'options' => array(
 		                            'route' => '/share',
 		                            'defaults' => array(
@@ -107,7 +107,7 @@ return array(
 		                        ),
 		                    ),
 		                    'ajax_newsletter' => array(
-		                        'type' => 'Zend\Router\Http\Literal',
+		                        'type' => 'Laminas\Router\Http\Literal',
 		                        'options' => array(
 		                            'route' => '/ajax-newsletter',
 		                            'defaults' => array(
@@ -123,7 +123,7 @@ return array(
             'admin' => array(
                 'child_routes' => array(
                     'playgroundpartnership_admin' => array(
-                        'type' => 'Zend\Router\Http\Literal',
+                        'type' => 'Laminas\Router\Http\Literal',
                         'priority' => 1000,
                         'options' => array(
                             'route' => '/partnership',
@@ -144,7 +144,7 @@ return array(
                                 ),
                             ),
                             'create' => array(
-                                'type' => 'Zend\Router\Http\Literal',
+                                'type' => 'Laminas\Router\Http\Literal',
                                 'options' => array(
                                     'route' => '/create',
                                     'defaults' => array(

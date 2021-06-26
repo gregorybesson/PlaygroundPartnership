@@ -2,7 +2,7 @@
 namespace PlaygroundPartnership\Service\Factory;
 
 use PlaygroundPartnership\Controller\IndexController;
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 use Interop\Container\ContainerInterface;
 
 class IndexControllerFactory implements FactoryInterface
