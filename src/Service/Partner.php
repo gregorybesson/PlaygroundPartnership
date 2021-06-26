@@ -3,13 +3,13 @@
 namespace PlaygroundPartnership\Service;
 
 use PlaygroundPartnership\Entity\Partner as PartnerEntity;
-use Zend\Form\Form;
-use Zend\ServiceManager\ServiceManager;
-use Zend\EventManager\EventManagerAwareTrait;
+use Laminas\Form\Form;
+use Laminas\ServiceManager\ServiceManager;
+use Laminas\EventManager\EventManagerAwareTrait;
 use PlaygroundPartnership\Options\ModuleOptions;
 use DoctrineModule\Validator\NoObjectExists as NoObjectExistsValidator;
-use Zend\Stdlib\ErrorHandler;
-use Zend\ServiceManager\ServiceLocatorInterface;
+use Laminas\Stdlib\ErrorHandler;
+use Laminas\ServiceManager\ServiceLocatorInterface;
 
 class Partner
 {

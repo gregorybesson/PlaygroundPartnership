@@ -2,7 +2,7 @@
 namespace PlaygroundPartnership\Service\Factory;
 
 use PlaygroundPartnership\Service\Partner;
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 use Interop\Container\ContainerInterface;
 
 class PartnerFactory implements FactoryInterface

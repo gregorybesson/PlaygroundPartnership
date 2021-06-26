@@ -2,12 +2,12 @@
 
 namespace PlaygroundPartnership\Form\Admin;
 
-use Zend\Form\Form;
-use Zend\Form\Element;
+use Laminas\Form\Form;
+use Laminas\Form\Element;
 use ZfcUser\Form\ProvidesEventsForm;
-use Zend\Mvc\I18n\Translator;
+use Laminas\Mvc\I18n\Translator;
 use DoctrineModule\Stdlib\Hydrator\DoctrineObject as DoctrineHydrator;
-use Zend\ServiceManager\ServiceManager;
+use Laminas\ServiceManager\ServiceManager;
 
 class Partner extends ProvidesEventsForm
 {
@@ -30,7 +30,7 @@ class Partner extends ProvidesEventsForm
 
         $this->add(array(
             'name' => 'id',
-            'type'  => 'Zend\Form\Element\Hidden',
+            'type'  => 'Laminas\Form\Element\Hidden',
             'attributes' => array(
                 'value' => 0,
             ),
@@ -48,7 +48,7 @@ class Partner extends ProvidesEventsForm
         ));
 
         $this->add(array(
-            'type' => 'Zend\Form\Element\Select',
+            'type' => 'Laminas\Form\Element\Select',
             'name' => 'active',
             'options' => array(
                 //'empty_option' => $translator->translate('Is the answer correct ?', 'playgroundpartnership'),
@@ -72,7 +72,7 @@ class Partner extends ProvidesEventsForm
         ));
         $this->add(array(
             'name' => 'logo',
-            'type'  => 'Zend\Form\Element\Hidden',
+            'type'  => 'Laminas\Form\Element\Hidden',
             'attributes' => array(
                     'value' => '',
             ),
@@ -91,7 +91,7 @@ class Partner extends ProvidesEventsForm
 
         $this->add(array(
             'name' => 'smallLogo',
-            'type'  => 'Zend\Form\Element\Hidden',
+            'type'  => 'Laminas\Form\Element\Hidden',
             'attributes' => array(
                 'value' => '',
             ),
@@ -120,7 +120,7 @@ class Partner extends ProvidesEventsForm
         ));
 
         $this->add(array(
-            'type' => 'Zend\Form\Element\Select',
+            'type' => 'Laminas\Form\Element\Select',
             'name' => 'newsletter',
             'options' => array(
             //'empty_option' => $translator->translate('Is the answer correct ?', 'playgroundpartnership'),
@@ -134,7 +134,7 @@ class Partner extends ProvidesEventsForm
 
         $this->add(array(
             'name' => 'bouncePage',
-            'type' => 'Zend\Form\Element\Radio',
+            'type' => 'Laminas\Form\Element\Radio',
             'options' => array(
                 'label' => $translator->translate('Recirculation page', 'playgroundpartnership'),
                 'value_options' => array(

@@ -2,9 +2,9 @@
 
 namespace PlaygroundPartnership\Controller;
 
-use Zend\Mvc\Controller\AbstractActionController;
-use Zend\View\Model\ViewModel;
-use Zend\ServiceManager\ServiceLocatorInterface;
+use Laminas\Mvc\Controller\AbstractActionController;
+use Laminas\View\Model\ViewModel;
+use Laminas\ServiceManager\ServiceLocatorInterface;
 
 class IndexController extends AbstractActionController
 {
@@ -43,7 +43,7 @@ class IndexController extends AbstractActionController
         $user = $this->zfcUserAuthentication()->getIdentity();
         $sp = $this->getPartnerService();
 
-        $response->setContent(\Zend\Json\Json::encode(array(
+        $response->setContent(\Laminas\Json\Json::encode(array(
                 'success' => 0
         )));
 
@@ -53,7 +53,7 @@ class IndexController extends AbstractActionController
             $data = $this->getRequest()->getPost()->toArray();
 
             if ($this->getPartnerService()->updateNewsletter($data, $this->zfcUserAuthentication()->getIdentity(), $partner)) {
-                $response->setContent(\Zend\Json\Json::encode(array(
+                $response->setContent(\Laminas\Json\Json::encode(array(
                     'success' => 1
                 )));
             }
