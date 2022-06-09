@@ -4,9 +4,9 @@ namespace PlaygroundPartnership\Form\Admin;
 
 use Laminas\Form\Form;
 use Laminas\Form\Element;
-use ZfcUser\Form\ProvidesEventsForm;
+use LmcUser\Form\ProvidesEventsForm;
 use Laminas\Mvc\I18n\Translator;
-use DoctrineModule\Stdlib\Hydrator\DoctrineObject as DoctrineHydrator;
+use Doctrine\Laminas\Hydrator\DoctrineObject as DoctrineHydrator;
 use Laminas\ServiceManager\ServiceManager;
 
 class Partner extends ProvidesEventsForm

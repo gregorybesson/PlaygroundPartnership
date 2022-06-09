@@ -40,7 +40,7 @@ class IndexController extends AbstractActionController
         $response = $this->getResponse();
 
         $identifier = $this->getEvent()->getRouteMatch()->getParam('id');
-        $user = $this->zfcUserAuthentication()->getIdentity();
+        $user = $this->lmcUserAuthentication()->getIdentity();
         $sp = $this->getPartnerService();
 
         $response->setContent(\Laminas\Json\Json::encode(array(
@@ -52,7 +52,7 @@ class IndexController extends AbstractActionController
         if ($request->isPost() && $partner && $user) {
             $data = $this->getRequest()->getPost()->toArray();
 
-            if ($this->getPartnerService()->updateNewsletter($data, $this->zfcUserAuthentication()->getIdentity(), $partner)) {
+            if ($this->getPartnerService()->updateNewsletter($data, $this->lmcUserAuthentication()->getIdentity(), $partner)) {
                 $response->setContent(\Laminas\Json\Json::encode(array(
                     'success' => 1
                 )));
