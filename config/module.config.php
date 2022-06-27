@@ -16,15 +16,15 @@ return array(
             )
         )
     ),
-    
+
     'bjyauthorize' => array(
-    
+
         'resource_providers' => array(
             'BjyAuthorize\Provider\Resource\Config' => array(
                 'partner'       => array(),
             ),
         ),
-    
+
         'rule_providers' => array(
             'BjyAuthorize\Provider\Rule\Config' => array(
                 'allow' => array(
@@ -32,7 +32,7 @@ return array(
                 ),
             ),
         ),
-    
+
         'guards' => array(
             'BjyAuthorize\Guard\Controller' => array(
                 array('controller' => 'playgroundpartnership_admin',                            'roles' => array('admin')),
@@ -58,7 +58,7 @@ return array(
         	__DIR__ . '/../view/frontend',
         ),
     ),
-	
+
 	'core_layout' => array(
 	    'frontend' => array(
 	        'modules' => array(
@@ -84,7 +84,7 @@ return array(
     'router' => array(
         'routes' => array(
         	'frontend' => array(
-       			'child_routes' => array(        		
+       			'child_routes' => array(
 		            'partnership' => array(
 		                'type' => 'Laminas\Router\Http\Segment',
 		                'options' => array(
@@ -201,7 +201,7 @@ return array(
             ),
         ),
     ),
-    
+
     'navigation' => array(
         'admin' => array(
             'playgroundgame' => array(
@@ -211,6 +211,20 @@ return array(
                         'route' => 'admin/playgroundpartnership_admin/list',
                         'resource' => 'partner',
                         'privilege' => 'list',
+                        'pages' => [
+                            'create' => array(
+                                'label' => 'Create partner',
+                                'route' => 'admin/playgroundpartnership_admin/create',
+                                'resource' => 'partner',
+                                'privilege' => 'create',
+                            ),
+                            'edit' => array(
+                                'label' => 'Edit partner',
+                                'route' => 'admin/playgroundpartnership_admin/edit',
+                                'resource' => 'partner',
+                                'privilege' => 'edit',
+                            ),
+                        ],
                     ),
                 ),
             ),
